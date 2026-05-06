@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk NR>=880 && NR<=895 *)",
+      "Bash(awk NR>=762 && NR<=870 *)",
+      "Bash(awk NR>=64 && NR<=116 *)",
+      "Bash(awk NR>=869 && NR<=895 *)",
+      "Bash(python3 -)",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('/Users/ivyarcher/Desktop/Decide V12/decide-logos/decide13.png'\\); print\\(img.size\\)\")"
+    ]
+  }
+}
