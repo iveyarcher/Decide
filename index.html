@@ -71,7 +71,7 @@
     overflow: hidden;
   }
   #flashLogo img { width: 340px; max-width: 100%; height: 90px; object-fit: contain; display: block; }
-  #flashLogo img.logo-13 { width: 349px; max-width: 100%; height: 93px; margin-left: 10px; }
+  #flashLogo img.logo-13 { width: 349px; max-width: 100%; height: 93px; margin-left: 5px; }
 
   .tagline { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
 
@@ -1919,9 +1919,17 @@ resetRing();
   let dir = 1;
   const el = document.getElementById('flashLogo');
 
+  // Preload all images so swaps are instant
+  const preloaded = images.map(src => { const i = new Image(); i.src = src; return i; });
+
+  // Single persistent img element — swap src/class instead of rebuilding
+  const imgEl = document.createElement('img');
+  imgEl.alt = 'decide';
+  el.appendChild(imgEl);
+
   function showImage(src) {
-    const cls = src.includes('13.png') ? ' class="logo-13"' : '';
-    el.innerHTML = `<img src="${src}" alt="decide"${cls}>`;
+    imgEl.src = src;
+    imgEl.className = src.includes('13.png') ? 'logo-13' : '';
   }
 
   showImage(images[0]);
