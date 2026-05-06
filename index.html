@@ -70,7 +70,7 @@
     justify-content: center;
     overflow: hidden;
   }
-  #flashLogo img { width: 340px; max-width: 100%; height: 90px; object-fit: contain; display: block; transition: opacity 0.06s ease; }
+  #flashLogo img { width: 340px; max-width: 100%; height: 90px; object-fit: contain; display: block; }
   #flashLogo img.logo-13 { transform: scale(1.03); margin-left: 5px; }
 
   .tagline { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
@@ -1928,12 +1928,8 @@ resetRing();
   el.appendChild(imgEl);
 
   function showImage(src) {
-    imgEl.style.opacity = '0';
-    setTimeout(() => {
-      imgEl.src = src;
-      imgEl.className = src.includes('13.png') ? 'logo-13' : '';
-      imgEl.style.opacity = '1';
-    }, 60);
+    imgEl.src = src;
+    imgEl.className = src.includes('13.png') ? 'logo-13' : '';
   }
 
   showImage(images[0]);
