@@ -784,6 +784,11 @@
   .hidden { display: none !important; }
 
   /* ═══ DESKTOP LAYOUT ═══ */
+  @media (max-width: 819px) {
+    .pull-lever-hint { display: none !important; }
+    .desktop-hint { display: none !important; }
+  }
+
   @media (min-width: 820px) {
     body { align-items: flex-start; justify-content: center; }
 
@@ -933,7 +938,7 @@
       </div>
       <div class="tab-body">
         <div id="slot-empty" class="empty-state" style="padding:20px 20px 10px;">
-          <img src="img_1221.png" alt="add 2+ options to spin" style="max-width:47.5%;height:auto;display:block;margin-bottom:14px;margin-left:155px;">
+          <img src="img_1221.png" alt="add 2+ options to spin" style="max-width:47.5%;height:auto;display:block;margin:0 auto 14px;">
           <p style="font-family:'Loverine',sans-serif;font-size:17px;font-weight:600;color:#202759;margin:0;">Add 2+ options to spin</p>
         </div>
         <div id="slot-content" class="hidden">
@@ -1014,7 +1019,7 @@
       </div>
       <div class="tab-body">
         <div id="rank-empty" class="empty-state" style="padding:20px 20px 10px;">
-          <img src="rank-empty.png" alt="What choice will you make?" style="max-width:35%;height:auto;display:block;margin-bottom:14px;margin-left:190px;">
+          <img src="rank-empty.png" alt="What choice will you make?" style="max-width:35%;height:auto;display:block;margin:0 auto 14px;">
           <p style="font-family:'Loverine',sans-serif;font-size:17px;font-weight:600;color:#202759;margin:0;">Add 2+ options to rank</p>
         </div>
         <div id="ai-loading" class="ai-loading hidden">
@@ -1156,8 +1161,8 @@
               <div class="eight-ball-answer-text" id="ballAnswerText"></div>
             </div>
           </div>
-          <p style="font-family:'Loverine',sans-serif;font-size:20px;color:#DD91BE;position:absolute;top:10px;right:-10px;transform:translateX(100%);animation:leverHintFade 1.6s ease-in-out infinite;margin:0;white-space:nowrap;">Tap to Shake</p>
-          <svg width="80" height="52" viewBox="0 0 80 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:38px;right:-10px;transform:translateX(100%);animation:leverHintFade 1.6s ease-in-out infinite;">
+          <p class="desktop-hint" style="font-family:'Loverine',sans-serif;font-size:20px;color:#DD91BE;position:absolute;top:10px;right:-10px;transform:translateX(100%);animation:leverHintFade 1.6s ease-in-out infinite;margin:0;white-space:nowrap;">Tap to Shake</p>
+          <svg class="desktop-hint" width="80" height="52" viewBox="0 0 80 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:38px;right:-10px;transform:translateX(100%);animation:leverHintFade 1.6s ease-in-out infinite;">
             <path d="M 74 4 C 74 44 20 46 4 40" stroke="#DD91BE" stroke-width="2.5" stroke-linecap="round"/>
             <path d="M 14 33 L 3 40 L 14 47" stroke="#DD91BE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
